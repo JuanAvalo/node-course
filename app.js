@@ -6,9 +6,14 @@ const {engine} = require('express-handlebars');
 
 const app = express();
 
-app.engine('hbs', engine( {extname: '.hbs', layoutsDir: 'views/layouts/', defaultLayout: 'main-layout'}));
-app.set('view engine', 'hbs');
+// Handlebars
+// app.engine('hbs', engine( {extname: '.hbs', layoutsDir: 'views/layouts/', defaultLayout: 'main-layout'}));
+// app.set('view engine', 'hbs');
+
+// Pug
 //  app.set('view engine', 'pug')   Use Pug as template
+
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const adminData = require('./routes/admin');
